@@ -1,5 +1,5 @@
 {
-	"name": "IncrementalCopyPipeline_copy1",
+	"name": "watermark",
 	"properties": {
 		"activities": [
 			{
