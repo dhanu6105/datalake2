@@ -157,7 +157,7 @@
 				"typeProperties": {
 					"variableName": "var_logging",
 					"value": {
-						"value": "@concat('IncrementalCopyActivity|Copy|',pipeline().DataFactory,'|',activity('IncrementalCopyActivity').Duration,'|',activity('IncrementalCopyActivity').Error,'|',activity('IncrementalCopyActivity').ExecutionDetails,'|',activity('IncrementalCopyActivity').ExecutionEndTime,'|',activity('IncrementalCopyActivity').ExecutionStartTime,'|',activity('IncrementalCopyActivity').JobId,'|',activity('IncrementalCopyActivity').Output,'|',pipeline().Pipeline,'|',activity('IncrementalCopyActivity').ActivityRunId,'|',activity('IncrementalCopyActivity').Status,'|',activity('IncrementalCopyActivity').StatusCode)",
+						"value": "@concat('IncrementalCopyActivity|Copy|',pipeline().DataFactory,'|',activity('IncrementalCopyActivity').Duration,'|',activity('IncrementalCopyActivity').Error,'|',activity('IncrementalCopyActivity').ExecutionDetails,'|',activity('IncrementalCopyActivity').ExecutionEndTime,'|',activity('IncrementalCopyActivity').ExecutionStartTime,'|',activity('IncrementalCopyActivity').JobId,'|',activity('IncrementalCopyActivity').Output,'|',pipeline().Pipeline,'|',activity('IncrementalCopyActivity').ActivityRunId,'|',activity('IncrementalCopyActivity').Status,'|',activity('IncrementalCopyActivity').StatusCode,\n'|',activity('IncrementalCopyActivity').pipeline().DataFactoryrowsCopied)",
 						"type": "Expression"
 					}
 				}
@@ -289,6 +289,13 @@
 									"StatusCode": {
 										"value": {
 											"value": "@split(item(),'|')[13]",
+											"type": "Expression"
+										},
+										"type": "String"
+									},
+									"rowsCopied": {
+										"value": {
+											"value": "@split(item(),'|')[14]",
 											"type": "Expression"
 										},
 										"type": "String"
